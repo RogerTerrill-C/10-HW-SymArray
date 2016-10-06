@@ -16,7 +16,7 @@
 #define SIZE 6
 
 //Function prototype
-int SymArray(int *array, int numElem);
+int SymArray(int* array, int numElem);
 
 // ==== main ==================================================================
 //
@@ -44,13 +44,13 @@ int main(void)
 //
 // ============================================================================
 
-int SymArray(int *array, int numElem)
+int SymArray(int* array, int numElem)
 {
-	auto int *arrEnd = array + numElem;
-	auto int *pFront;
-	auto int *pBack;
+	auto int* arrEnd = array + numElem;
+	auto int* pFront;
+	auto int* pBack;
 	
-	for(pFront = array, pBack = array + numElem -1; pFront < arrEnd; pFront++, pBack--)
+	for(pFront = array, pBack = arrEnd -1; pFront < arrEnd; pFront++, pBack--)
 	{
 		printf("%d %d\n", *pFront, *pBack);
 		if(*pFront != *pBack)
